@@ -25,7 +25,7 @@ int getBalance(Node* n) {
     return (n == nullptr) ? 0 : height(n->left) - height(n->right);
 }
 
-// Right rotation (LL case)
+// LL rotation 
 Node* rightRotate(Node* y) {
     Node* x = y->left;
     Node* T2 = x->right;
@@ -39,7 +39,7 @@ Node* rightRotate(Node* y) {
     return x;
 }
 
-// Left rotation (RR case)
+// RR rotation 
 Node* leftRotate(Node* x) {
     Node* y = x->right;
     Node* T2 = y->left;
@@ -53,7 +53,7 @@ Node* leftRotate(Node* x) {
     return y;
 }
 
-// Insert node
+// Inserting a node
 Node* insert(Node* node, int key) {
     if (node == nullptr)
         return new Node(key);
@@ -193,4 +193,5 @@ int main() {
 
     return 0;
 }
+
 
