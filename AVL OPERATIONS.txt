@@ -15,12 +15,12 @@ struct Node {
     }
 };
 
-// Utility: height of node
+// height of node
 int height(Node* n) {
     return (n == nullptr) ? 0 : n->height;
 }
 
-// Utility: balance factor
+// balance factor
 int getBalance(Node* n) {
     return (n == nullptr) ? 0 : height(n->left) - height(n->right);
 }
@@ -193,3 +193,4 @@ int main() {
 
     return 0;
 }
+
